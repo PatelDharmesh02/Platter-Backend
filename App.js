@@ -4,14 +4,7 @@ const { RESTAURANTS_DATA, RESTAURANTS_DETAILS } = require("./data");
 
 const app = express();
 
-app.use(
-  cors({
-    origin: [
-      "http://localhost:1234",
-      "https://online-food-odering-app-bice.vercel.app/",
-    ],
-  })
-);
+app.use(cors());
 
 app.get("/restaurants", (req, res) => {
   res.send(RESTAURANTS_DATA);
